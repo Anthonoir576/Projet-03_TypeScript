@@ -10,7 +10,14 @@ function App() {
 
   return (
     <div className="App">
-      SAAAA
+      <main>
+        <div className="recherche">
+          <input type="text" 
+                 className="recherche-bar"
+                 placeholder='  Recherche...' 
+          />
+        </div>
+      </main>
     </div>
   );
 }
