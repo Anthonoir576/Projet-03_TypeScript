@@ -25,26 +25,26 @@ main {
 }
 
 .recherche {
-    width                : 60%;
+    width                : 100%;
     margin               : 0rem auto;
 }
 
 .recherche .recherche-bar {
-    margin-top           : 5rem;
-    padding              : 10px;
+    margin-top           : .5rem;
+    padding              : 5px 0 7px 0;
     width                : 100%;
     border-top           : 1px solid rgba(0, 0, 0, 0);
     border-left          : 1px solid rgba(0, 0, 0, 0);
     border-right         : 1px solid rgba(0, 0, 0, 0);
     border-bottom        : 2px solid rgb(255, 255, 255);
+    border-radius        : 0 0 15px 15px;
     box-shadow           : 0px 10px 15px -15px black;
-    border-radius        : 3px;
-    padding-bottom       : 5px;
     outline              : none;
-    background-color     : rgba(0, 0, 0, 0);
+    background-color     : rgba(255, 255, 255, 0.2);
     letter-spacing       : 1px;
     font-size            : 22px;
     appearance           : none;
+    transition           : .4 ease;
     /* text-transform    : uppercase; */
 }
 
@@ -52,4 +52,12 @@ main {
     color                : white;
     text-align           : center;
     text-shadow          : 1px 2px 2px rgba(0, 0, 0, 0.808);
+}
+
+.recherche-bar:focus {
+    background-color     : rgba(255, 255, 255, 0.28);
+    text-shadow          : 1px 2px 2px rgba(0, 0, 0, 0.808);
+    box-shadow           : 0px 10px 15px -13px black;
+    transition           : .4 ease-out;
+    text-align           : center;
 }
