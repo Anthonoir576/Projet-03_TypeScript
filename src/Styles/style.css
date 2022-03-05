@@ -1,21 +1,41 @@
-body {
+body, * {
     padding              : 0;
     margin               : 0;
     box-sizing           : border-box;
+    font-family          : -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    color                : white;
+}
+
+.App {
+    width                : 100vw;
+    height               : 100vh;
+    background           : url('../Assets/Picture/hiver.jpg');
+    background-size      : cover;
+    background-position  : bottom;
+    transition           : .4 ease-out;
 }
 
 .recherche {
     width                : 50%;
-    margin               : 5rem auto;
+    margin               : 0rem auto;
 }
 
-.recherche-bar {
+.recherche .recherche-bar {
+    margin-top           : 5rem;
     width                : 100%;
-    border-top           : 1px solid transparent;
-    border-left          : 1px solid transparent;
-    border-right         : 1px solid transparent;
-    border-bottom        : 1px solid rgb(0, 0, 0);
-    border-radius        : 5px;
+    border-top           : 1px solid rgba(0, 0, 0, 0);
+    border-left          : 1px solid rgba(0, 0, 0, 0);
+    border-right         : 1px solid rgba(0, 0, 0, 0);
+    border-bottom        : 2px solid rgb(255, 255, 255);
+    border-radius        : 3px;
     padding-bottom       : 5px;
     outline              : none;
+    background-color     : transparent;
+    letter-spacing       : 1px;
+    font-size            : 22px;
+    /* text-transform    : uppercase; */
+}
+
+.recherche-bar::placeholder {
+    color                : white;
 }
