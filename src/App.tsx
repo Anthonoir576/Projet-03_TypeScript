@@ -1,7 +1,18 @@
-import React from "react";
+import React        from 'react';
+import { apiKey }   from './Components/apiKey';
+
+
 
 function App() {
-  return <div className="App"></div>;
+
+  console.log(apiKey);
+  
+
+  return (
+    <div className="App">
+      SAAAA
+    </div>
+  );
 }
 
 export default App;
