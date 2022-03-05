@@ -1,5 +1,5 @@
 import React        from 'react';
-import { apiKey }   from './Components/apiKey';
+import { apiKey }   from './Components/Api/apiKey';
 
 
 
