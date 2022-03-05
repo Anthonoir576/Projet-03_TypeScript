@@ -38,4 +38,5 @@ body, * {
 
 .recherche-bar::placeholder {
     color                : white;
+    text-align           : center;
 }
