@@ -61,3 +61,17 @@ main {
     transition           : .4 ease-out;
     text-align           : center;
 }
+
+.location-container {
+    margin               : 5rem 2rem;
+}
+
+.location {
+    margin               : 1rem 0;
+    text-align           : center;
+}
+
+.date {
+    margin               : 8rem 0;
+    text-align           : justify;
+}

@@ -17,7 +17,7 @@ const Location = () => {
                 Localisation
             </div>
             <div className="date">
-            {` ici ${dateFonction(dateDay)}`}    
+            {`${dateFonction(dateDay)}`}    
             </div>
         </div>
     );
