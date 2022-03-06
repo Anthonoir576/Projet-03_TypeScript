@@ -34,7 +34,7 @@ function App() {
     // console.log(annee);
     // console.log('-------');
 
-    return `${jour} ${date <= 9 ? (`0${date}`) : (`${date}`)} ${month} ${annee}`;
+    return `${jour} ${date} ${month} ${annee}`;
   };
 
   const [request, setRequest]      = useState('');
@@ -57,7 +57,6 @@ function App() {
 
       }).catch((err   :any) => {
         setRequest('');    
-        // console.log(err);
       });
     };
 
@@ -66,7 +65,7 @@ function App() {
 
 
   return (
-    <div className={(typeof meteo.main != 'undefined') ? ((meteo.main.temp > 16) ? 'App ete' : 'App') : ('App') }>
+    <div className={(typeof meteo.main != 'undefined') ? ((meteo.main.temp > 16 && meteo.main.temp > 0) ? 'App ete' : 'App') : ('App') }>
       <main>
 
         <div className="recherche">
@@ -99,7 +98,7 @@ function App() {
             )}
             </div>
             <div className="meteo">
-              {(typeof meteo.weather[0].main != 'undefined') ? ((meteo.weather[0].main !== 'Clouds') ? (<p>Nuageux</p>) : (<p>Dégagé</p>)) : ('')}
+              {(typeof meteo.name != 'undefined') ? ((meteo.weather[0].main !== 'Clouds') ? (<p>Nuageux</p>) : (<p>Dégagé</p>)) : (<p></p>)}
             </div>
           </div>
 
