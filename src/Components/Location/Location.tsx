@@ -34,7 +34,7 @@ const Location = () => {
     return (
         <div className='location-container'>
             <div className="location">
-                Localisation
+                Montigny-en-Ostrevent
             </div>
             <div className="date">
                 {` -  ${dateFonction()}  - `}    

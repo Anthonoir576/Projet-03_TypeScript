@@ -62,17 +62,45 @@ main {
     text-align           : center;
 }
 
-.location-container {
+.location-container, .meteo-container {
     margin               : 5rem 2rem 0 2rem;
 }
 
-.location {
+.location, .date, .temperature, .meteo {
     margin               : 1rem 0 0 0;
     text-align           : center;
 }
 
+.location {
+    font-size            : 23px;
+    font-weight          : 500;
+    text-shadow          : 3px 3px rgba(50, 50, 70, .1);
+}
+
 .date {
-    margin               : 1rem 0 0 0;
-    text-align           : justify;
-    text-align           : center;
+    font-size            : 18px;
+    text-shadow          : 1.5px 1.5px rgba(50, 50, 70, .1);
+    font-style           : italic;
+}
+
+.temperature {
+    font-size            : 100px;
+    background-color     : rgba(255, 255, 255, .2);
+    border-radius        : 5px;
+    padding              : 50px 25px;
+    text-shadow          : 3px 6px rgba(50, 50, 70, .5);
+}
+
+.meteo {
+    font-style           : oblique;
+}
+
+.meteo::before {
+    content              : '';
+    display              : block;
+    margin               : 1rem auto;
+    width                : 90%;
+    height               : 1px;
+    background-color     : white;
+
 }
