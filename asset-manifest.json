@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Anthonoir576/Projet-03_TypeScript/static/css/main.4cbe7702.css",
+    "main.js": "/Anthonoir576/Projet-03_TypeScript/static/js/main.a2c5b63c.js",
+    "static/media/ete.jpg": "/Anthonoir576/Projet-03_TypeScript/static/media/ete.8fe9daf3f2e0850dd16d.jpg",
+    "static/media/hiver.jpg": "/Anthonoir576/Projet-03_TypeScript/static/media/hiver.ae6b95687c84d045ff56.jpg",
+    "index.html": "/Anthonoir576/Projet-03_TypeScript/index.html",
+    "main.4cbe7702.css.map": "/Anthonoir576/Projet-03_TypeScript/static/css/main.4cbe7702.css.map",
+    "main.a2c5b63c.js.map": "/Anthonoir576/Projet-03_TypeScript/static/js/main.a2c5b63c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4cbe7702.css",
+    "static/js/main.a2c5b63c.js"
+  ]
+}
