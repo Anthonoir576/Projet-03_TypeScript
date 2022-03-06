@@ -4,6 +4,7 @@ body, * {
     box-sizing           : border-box;
     font-family          : -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
     color                : white;
+    text-align           : center;
 }
 
 .App {
@@ -15,8 +16,13 @@ body, * {
     transition           : .4 ease-out;
 }
 
-.app.ete {
+.App.ete {
+    width                : 100vw;
+    height               : 100vh;
     background           : url('../Assets/Picture/ete.jpg');
+    background-size      : cover;
+    background-position  : bottom;
+    transition           : .4 ease-out;
 }
 
 main {
@@ -50,7 +56,6 @@ main {
 
 .recherche-bar::placeholder {
     color                : white;
-    text-align           : center;
     text-shadow          : 1px 2px 2px rgba(0, 0, 0, 0.808);
 }
 
@@ -59,7 +64,6 @@ main {
     text-shadow          : 1px 2px 2px rgba(0, 0, 0, 0.808);
     box-shadow           : 0px 10px 15px -13px black;
     transition           : .4 ease-out;
-    text-align           : center;
 }
 
 .location-container, .meteo-container {
@@ -68,13 +72,13 @@ main {
 
 .location, .date, .temperature, .meteo {
     margin               : 1rem 0 0 0;
-    text-align           : center;
 }
 
 .location {
     font-size            : 23px;
     font-weight          : 500;
     text-shadow          : 3px 3px rgba(50, 50, 70, .1);
+    text-transform       : uppercase;
 }
 
 .date {
@@ -107,5 +111,4 @@ main {
     width                : 90%;
     height               : 1px;
     background-color     : white;
-
 }

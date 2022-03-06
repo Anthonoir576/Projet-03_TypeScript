@@ -37,8 +37,8 @@ function App() {
     return `${jour} ${date} ${month} ${annee}`;
   };
 
-  const [request, setRequest]   = useState('');
-  const [meteo, setMeteo]       = useState({});
+  const [request, setRequest]      = useState('');
+  const [meteo, setMeteo]:any      = useState({});
   
 
   const search = (e: any) => {
@@ -50,16 +50,10 @@ function App() {
         url: `${apiKey.base}weather?q=${request}&units=metric&APPID=${apiKey.key}`
       })
       .then((result :any) => {
-        console.log('Saisi réussie !');
-        // console.log(meteo);
-        setRequest('');
-        result.json();     
-      
-      }).then((result :any) => {
-        console.log('Saisi réussie !');
-        // console.log(meteo);
-        setRequest(''); 
-        setMeteo(result);
+        console.log('Saisi réussie - code 01!');
+
+        setMeteo(result.data);   
+        console.log(meteo);
 
       }).catch((err   :any) => {
         setRequest('');    
@@ -72,7 +66,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className={(typeof meteo.main != 'undefined') ? ((meteo.main.temp > 16) ? 'App ete' : 'App') : ('App') }>
       <main>
 
         <div className="recherche">
@@ -87,7 +81,9 @@ function App() {
 
           <div className='location-container'>
             <div className="location">
-                Montigny-en-Ostrevent
+              {(typeof meteo.name != 'undefined') ? (
+                `${meteo.name}, ${meteo.sys.country}`
+              ) : ('Saisir une ville...')}
             </div>
             <div className="date">
                 {` -  ${dateFonction()}  - `}    
@@ -96,10 +92,18 @@ function App() {
 
           <div className='meteo-container'>
             <div className="temperature">
-                25°
+            {(typeof meteo.name != 'undefined') ? (
+              `${Math.round(meteo.main.temp)} °` 
+            ) : (
+              '°'
+            )}
             </div>
             <div className="meteo">
-                Sun
+              {(typeof meteo.weather[0].main != 'undefined') ? (
+                `${meteo.weather[0].main}`
+              ) : (
+                ''
+              )}
             </div>
           </div>
 
