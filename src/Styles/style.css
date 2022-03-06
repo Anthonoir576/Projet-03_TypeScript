@@ -63,15 +63,16 @@ main {
 }
 
 .location-container {
-    margin               : 5rem 2rem;
+    margin               : 5rem 2rem 0 2rem;
 }
 
 .location {
-    margin               : 1rem 0;
+    margin               : 1rem 0 0 0;
     text-align           : center;
 }
 
 .date {
-    margin               : 8rem 0;
+    margin               : 1rem 0 0 0;
     text-align           : justify;
+    text-align           : center;
 }
