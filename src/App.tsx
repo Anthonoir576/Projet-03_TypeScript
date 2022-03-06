@@ -15,8 +15,8 @@ function App() {
   // Fonction
   const dateFonction = (dateDay?: any) => {      
 
-    let mois    : string[]   = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    let jours   : string []  = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    let mois    : string[]   = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
+    let jours   : string []  = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 
     let jour    = jours[new Date().getDate()];
     // console.log(jour);
@@ -99,11 +99,7 @@ function App() {
             )}
             </div>
             <div className="meteo">
-              {(typeof meteo.weather[0].main != 'undefined') ? (
-                `${meteo.weather[0].main}`
-              ) : (
-                ''
-              )}
+              {(typeof meteo.weather[0].main != 'undefined') ? ((meteo.weather[0].main !== 'Clouds') ? ('Nuageux') : ('Dégagé')) : ('')}
             </div>
           </div>
 
