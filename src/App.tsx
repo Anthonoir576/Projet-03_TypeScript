@@ -34,7 +34,7 @@ function App() {
     // console.log(annee);
     // console.log('-------');
 
-    return `${jour} ${date} ${month} ${annee}`;
+    return `${jour} ${date <= 9 ? (`0${date}`) : (`${date}`)} ${month} ${annee}`;
   };
 
   const [request, setRequest]      = useState('');
@@ -53,7 +53,7 @@ function App() {
         console.log('Saisi réussie - code 01!');
 
         setMeteo(result.data);   
-        console.log(meteo);
+        setRequest('');
 
       }).catch((err   :any) => {
         setRequest('');    
@@ -99,7 +99,7 @@ function App() {
             )}
             </div>
             <div className="meteo">
-              {(typeof meteo.weather[0].main != 'undefined') ? ((meteo.weather[0].main !== 'Clouds') ? ('Nuageux') : ('Dégagé')) : ('')}
+              {(typeof meteo.weather[0].main != 'undefined') ? ((meteo.weather[0].main !== 'Clouds') ? (<p>Nuageux</p>) : (<p>Dégagé</p>)) : ('')}
             </div>
           </div>
 
