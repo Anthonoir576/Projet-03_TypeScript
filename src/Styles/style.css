@@ -95,6 +95,9 @@ main {
 
 .meteo {
     font-style           : oblique;
+    text-shadow          : 1.5px 1.5px rgba(50, 50, 70, .1);
+    text-transform       : uppercase;
+    font-weight          : 900;
 }
 
 .meteo::before {
