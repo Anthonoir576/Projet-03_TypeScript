@@ -1,22 +1,22 @@
+
 import React        from 'react';
 import { apiKey }   from './Components/Api/apiKey';
+import Location     from './Components/Location/Location';
+import Search       from './Components/Search/Search';
 
 
 
 function App() {
 
+  
   console.log(apiKey);
   
 
   return (
     <div className="App">
       <main>
-        <div className="recherche">
-          <input type="text" 
-                 className="recherche-bar"
-                 placeholder='  Recherche...' 
-          />
-        </div>
+        <Search />
+        <Location />
       </main>
     </div>
   );
