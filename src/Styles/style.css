@@ -86,9 +86,11 @@ main {
 .temperature {
     font-size            : 100px;
     background-color     : rgba(255, 255, 255, .2);
-    border-radius        : 5px;
+    border-radius        : 18px;
     padding              : 50px 25px;
     text-shadow          : 3px 6px rgba(50, 50, 70, .5);
+    font-weight          : 700;
+    box-shadow           : 5px 5px rgba(0, 0, 0, .15);
 }
 
 .meteo {
